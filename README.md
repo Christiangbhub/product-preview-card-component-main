@@ -6,7 +6,7 @@
 
 ***
 
-**LIVE SITE**: https://christiangbhub.github.io/product-preview-card-component-main/
+**LIVE SITE**: https://peaceful-pothos-5ae551.netlify.app/
 
 
 
