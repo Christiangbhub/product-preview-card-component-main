@@ -1,5 +1,15 @@
 # Frontend Mentor - Product preview card component
 
+
+
+**GITHUB**: https://github.com/Christiangbhub/product-preview-card-component-main
+
+***
+
+**LIVE SITE**: https://christiangbhub.github.io/product-preview-card-component-main/
+
+
+
 ![Design preview for the Product preview card component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
