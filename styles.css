@@ -1,0 +1,248 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* css reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* css */
+
+:root {
+  --Green-light: hsl(158, 36%, 37%);
+  --Green-dark: hsl(158, 42%, 18%);
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+  --body-copy: 0.8rem;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--Black);
+  display: grid;
+  place-items: center;
+  background-color: var(--Cream);
+}
+
+.small-title {
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--Grey);
+}
+
+.main-title,
+.new-price {
+  font-family: "Fraunces", serif;
+}
+
+.main-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  max-width: 30ch;
+  line-height: 1;
+  margin-block-start: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.body-copy {
+  font-size: var(--body-copy);
+  max-width: 30ch;
+  color: var(--Grey);
+  font-weight: 500;
+  margin-block-end: 1em;
+}
+
+.new-price {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: var(--Green-light);
+}
+
+.old-price {
+  font-size: 0.7rem;
+  text-decoration: line-through;
+  color: var(--Grey);
+  margin-left: 0.8rem;
+  font-weight: 500;
+}
+
+.card__bottom__btn {
+  min-width: 100%;
+  padding: 1rem 0;
+  background-color: var(--Green-light);
+  color: var(--White);
+  border: none;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__bottom__btn:hover {
+  background-color: var(--Green-dark);
+}
+
+.card__bottom__btn p {
+  display: inline-block;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.cart-icon {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.card {
+  max-width: 20rem;
+  background-color: var(--White);
+  border-radius: 0.5rem;
+}
+
+.main-image {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.card__bottom_content {
+  padding: 0 2rem;
+}
+
+.card__bottom__price {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.card__bottom_content {
+  padding-bottom: 1.8rem;
+}
+
+main {
+  padding: 2rem 0;
+}
+
+@media (min-width: 80rem) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+  }
+
+  .card__top {
+    max-width: 30rem;
+    max-height: 30rem;
+  }
+
+  .card__bottom {
+    background-color: yellow;
+    max-width: 30rem;
+  }
+
+  .main-image {
+    border-radius: 0;
+    max-width: 30rem;
+    max-height: 30rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .main-title {
+    font-size: 1.5rem;
+    max-width: 50ch;
+  }
+}
